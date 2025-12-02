@@ -1,0 +1,14 @@
+===== NOTIFIKASI VERIFIKASI =====
+Tanggal: 2025-12-02 02:51:40
+NPM: 2425600022
+Nama: Khevarizmi Fuzzy Dicakayana
+Status: Terverifikasi
+Catatan Admin: 
+
+===== NOTIFIKASI VERIFIKASI =====
+Tanggal: 2025-12-02 02:55:26
+NPM: 2425600022
+Nama: Khevarizmi Fuzzy Dicakayana
+Status: Ditolak
+Catatan Admin: Foto formal kurang jelas, mohon upload foto dengan kualitas lebih baik
+

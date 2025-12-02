@@ -1,0 +1,538 @@
+/* ============================================
+   SISTEM WISUDA - STIE MULIA PRATAMA
+   "The Spirit of Education | We Create Your Success"
+   Warna: Merah, Putih, Abu-abu Gelap
+   ============================================ */
+
+/* CSS Variables - Warna STIE Mulia Pratama */
+:root {
+    --merah-primary: #C41E3A;      /* Merah STIE MP */
+    --merah-dark: #8B0000;         /* Merah Gelap */
+    --merah-light: #E74C3C;        /* Merah Terang */
+    --abu-dark: #2C3E50;           /* Abu Gelap */
+    --abu-medium: #34495E;         /* Abu Medium */
+    --abu-light: #7F8C8D;          /* Abu Terang */
+    --putih: #FFFFFF;              /* Putih */
+    --bg-light: #ECF0F1;           /* Background Terang */
+    --hijau: #27AE60;              /* Hijau untuk success */
+    --kuning: #F39C12;             /* Kuning untuk warning */
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--abu-dark);
+    line-height: 1.6;
+}
+
+/* ============================================
+   NAVBAR - MERAH STIE MP
+   ============================================ */
+.navbar-dark {
+    background: linear-gradient(90deg, var(--merah-primary) 0%, var(--merah-dark) 100%) !important;
+    box-shadow: 0 2px 10px rgba(196, 30, 58, 0.3);
+}
+
+.navbar-dark .navbar-brand {
+    color: var(--putih) !important;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar-dark .nav-link {
+    color: rgba(255,255,255,0.95) !important;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.navbar-dark .nav-link:hover {
+    color: var(--kuning) !important;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   HERO SECTION - BANNER STIE MP
+   ============================================ */
+.hero-section {
+    background: linear-gradient(135deg, var(--merah-primary) 0%, var(--abu-dark) 100%);
+    padding: 120px 0;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.hero-section h1 {
+    animation: fadeInDown 1s;
+    color: var(--putih);
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-section p {
+    animation: fadeInUp 1s;
+    color: var(--putih);
+    font-size: 1.2rem;
+}
+
+.hero-section .tagline {
+    color: var(--kuning);
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.hero-image-container {
+    animation: fadeInRight 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============================================
+   BUTTONS - STIE MP STYLE
+   ============================================ */
+.btn-primary {
+    background: linear-gradient(135deg, var(--merah-primary) 0%, var(--merah-dark) 100%);
+    border: none;
+    padding: 12px 35px;
+    font-weight: 700;
+    color: var(--putih);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--merah-dark) 0%, var(--merah-primary) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(196, 30, 58, 0.4);
+    color: var(--putih);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, var(--hijau) 0%, #229954 100%);
+    border: none;
+    color: var(--putih);
+    font-weight: 600;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #229954 0%, var(--hijau) 100%);
+    color: var(--putih);
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, var(--kuning) 0%, #D68910 100%);
+    border: none;
+    color: var(--putih);
+    font-weight: 600;
+}
+
+.btn-warning:hover {
+    background: linear-gradient(135deg, #D68910 0%, var(--kuning) 100%);
+    color: var(--putih);
+}
+
+.btn-info {
+    background: linear-gradient(135deg, var(--abu-medium) 0%, var(--abu-dark) 100%);
+    border: none;
+    color: var(--putih);
+    font-weight: 600;
+}
+
+.btn-info:hover {
+    background: linear-gradient(135deg, var(--abu-dark) 0%, var(--abu-medium) 100%);
+    color: var(--putih);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, var(--merah-light) 0%, var(--merah-primary) 100%);
+    border: none;
+    color: var(--putih);
+    font-weight: 600;
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--abu-light) 0%, var(--abu-medium) 100%);
+    border: none;
+    color: var(--putih);
+    font-weight: 600;
+}
+
+/* ============================================
+   CARDS - STIE MP STYLE
+   ============================================ */
+.feature-card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    border-radius: 10px;
+    background: var(--putih);
+    border-top: 4px solid var(--merah-primary);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(196, 30, 58, 0.3);
+    border-top-color: var(--merah-dark);
+}
+
+.feature-icon {
+    font-size: 3.5rem;
+    color: var(--merah-primary);
+}
+
+/* Card Headers */
+.card-header {
+    font-weight: bold;
+    border-radius: 10px 10px 0 0 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-header.bg-primary {
+    background: linear-gradient(90deg, var(--merah-primary) 0%, var(--merah-dark) 100%) !important;
+    color: var(--putih) !important;
+}
+
+.card-header.bg-success {
+    background: linear-gradient(90deg, var(--hijau) 0%, #229954 100%) !important;
+    color: var(--putih) !important;
+}
+
+.card-header.bg-info {
+    background: linear-gradient(90deg, var(--abu-dark) 0%, var(--abu-medium) 100%) !important;
+    color: var(--putih) !important;
+}
+
+.card-header.bg-warning {
+    background: linear-gradient(90deg, var(--kuning) 0%, #D68910 100%) !important;
+    color: var(--putih) !important;
+}
+
+/* ============================================
+   FORMS - STIE MP STYLE
+   ============================================ */
+.form-container {
+    background: var(--putih);
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(196, 30, 58, 0.2);
+    padding: 50px;
+    margin-top: 30px;
+    border-top: 5px solid var(--merah-primary);
+}
+
+.form-container h2 {
+    color: var(--merah-primary);
+    margin-bottom: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--abu-dark);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--merah-primary);
+    box-shadow: 0 0 0 0.2rem rgba(196, 30, 58, 0.25);
+}
+
+/* ============================================
+   TABLES - STIE MP STYLE
+   ============================================ */
+.table-container {
+    background: var(--putih);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.table thead {
+    background: linear-gradient(135deg, var(--merah-primary) 0%, var(--merah-dark) 100%);
+    color: var(--putih);
+}
+
+.table thead th {
+    border: none;
+    color: var(--putih);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #FFF5F5;
+}
+
+.table-bordered {
+    border-color: var(--merah-primary);
+}
+
+/* ============================================
+   LOGIN CARD - STIE MP STYLE
+   ============================================ */
+.login-card {
+    background: var(--putih);
+    border-radius: 15px;
+    box-shadow: 0 15px 50px rgba(196, 30, 58, 0.3);
+    overflow: hidden;
+}
+
+.login-header {
+    background: linear-gradient(135deg, var(--merah-primary) 0%, var(--merah-dark) 100%);
+    color: var(--putih);
+    padding: 40px;
+    text-align: center;
+}
+
+.login-body {
+    padding: 40px;
+}
+
+/* ============================================
+   BADGES - STIE MP STYLE
+   ============================================ */
+.badge.bg-warning {
+    background: var(--kuning) !important;
+    color: var(--putih) !important;
+}
+
+.badge.bg-info {
+    background: var(--abu-medium) !important;
+    color: var(--putih) !important;
+}
+
+.badge.bg-success {
+    background: var(--hijau) !important;
+    color: var(--putih) !important;
+}
+
+.badge.bg-danger {
+    background: var(--merah-primary) !important;
+    color: var(--putih) !important;
+}
+
+/* ============================================
+   STEP NUMBER - STIE MP STYLE
+   ============================================ */
+.step-number {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--merah-primary) 0%, var(--merah-dark) 100%);
+    color: var(--putih);
+    font-size: 2.5rem;
+    font-weight: 900;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(196, 30, 58, 0.3);
+}
+
+/* ============================================
+   UPLOAD PREVIEW
+   ============================================ */
+.upload-preview,
+.file-preview {
+    max-width: 200px;
+    max-height: 200px;
+    margin-top: 10px;
+    border: 3px solid var(--merah-primary);
+    border-radius: 10px;
+    padding: 5px;
+    object-fit: cover;
+}
+
+/* ============================================
+   ALERTS - STIE MP STYLE
+   ============================================ */
+.alert {
+    border-radius: 10px;
+    border: none;
+    border-left: 5px solid;
+}
+
+.alert-warning {
+    background-color: #FEF5E7;
+    color: #7D6608;
+    border-left-color: var(--kuning);
+}
+
+.alert-info {
+    background-color: #EBF5FB;
+    color: var(--abu-dark);
+    border-left-color: var(--abu-medium);
+}
+
+.alert-success {
+    background-color: #EAFAF1;
+    color: #0E6655;
+    border-left-color: var(--hijau);
+}
+
+.alert-danger {
+    background-color: #FADBD8;
+    color: #78281F;
+    border-left-color: var(--merah-primary);
+}
+
+/* ============================================
+   TEXT COLORS
+   ============================================ */
+.text-primary {
+    color: var(--merah-primary) !important;
+}
+
+.text-warning {
+    color: var(--kuning) !important;
+}
+
+.text-info {
+    color: var(--abu-medium) !important;
+}
+
+.text-success {
+    color: var(--hijau) !important;
+}
+
+.text-danger {
+    color: var(--merah-primary) !important;
+}
+
+/* ============================================
+   BACKGROUNDS
+   ============================================ */
+.bg-light {
+    background-color: var(--bg-light) !important;
+}
+
+.bg-dark {
+    background: linear-gradient(90deg, var(--abu-dark) 0%, var(--abu-medium) 100%) !important;
+}
+
+/* ============================================
+   FOOTER - STIE MP STYLE
+   ============================================ */
+footer.bg-dark {
+    background: linear-gradient(90deg, var(--abu-dark) 0%, var(--merah-dark) 100%) !important;
+    color: var(--putih);
+    padding: 30px 0;
+}
+
+/* ============================================
+   LOGO SECTION
+   ============================================ */
+.logo-section {
+    background: var(--putih);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--merah-primary);
+}
+
+.logo-stiemp {
+    max-width: 80px;
+    height: auto;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 80px 0;
+    }
+    
+    .form-container {
+        padding: 30px 20px;
+    }
+    
+    .table-container {
+        overflow-x: auto;
+    }
+    
+    .step-number {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+.shadow-red {
+    box-shadow: 0 5px 15px rgba(196, 30, 58, 0.3);
+}
+
+.border-red {
+    border-color: var(--merah-primary) !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
